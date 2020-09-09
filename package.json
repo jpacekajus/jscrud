@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "mysql": "^2.14.1",
-    "restify": "^5.2.0"
+    "restify": "^8.5.1"
   }
 }
