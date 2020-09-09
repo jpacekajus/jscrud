@@ -10,7 +10,7 @@ module.exports = {
     port: process.env.PORT || 3000,
     db: {
         get : mysql.createConnection({
-			host     : 'localhost',
+			host     : 'db',
 			user     : 'appuser1',
 			password : 'password1234',
 			database : 'people'
