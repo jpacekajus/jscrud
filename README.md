@@ -9,14 +9,14 @@ docker
 docker-compose
 ```
 
-#How to run
+# How to run
 
 Simply execute the following command in application directory:
 ```
 docker-compose up
 ```
 
-#How to use
+# How to use
 
 App has the following endpoints:
 ```
