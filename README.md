@@ -1,6 +1,6 @@
 # jscrud
 
-Example Node.js application for listing, creating and deleting DB records
+Example Node.js application for listing, creating and deleting DB records with easy deployment by using docker-compose.
 
 # Dependencies
 
