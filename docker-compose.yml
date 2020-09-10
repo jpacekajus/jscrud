@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: jscrud:2.1
+    image: jscrud:2.3
     container_name: jscrud
     restart: unless-stopped
     ports:
