@@ -7,13 +7,13 @@ module.exports = {
     hostname : 'http://localhost',
     version: '0.0.1',
     env: process.env.NODE_ENV || 'development',
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 80,
     db: {
         get : mysql.createConnection({
-			host     : 'db',
-			user     : 'appuser1',
-			password : 'password1234',
-			database : 'people'
+			host     : process.env.MYSQL_HOST,
+			user     : process.env.MYSQL_USER,
+			password : process.env.MYSQL_PASSWORD,
+			database : process.env.MYSQL_DATABASE
 		})
     }
 }

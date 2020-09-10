@@ -1,13 +1,17 @@
 {
-  "name": "nodejs-restapi",
+  "name": "jscrud",
   "version": "1.0.0",
-  "description": "",
+  "description": "Homework for Quantilope",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no tests available\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Justas Pacekajus",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jpacekajus/jscrud.git"
+  },
   "license": "ISC",
   "dependencies": {
     "mysql": "^2.14.1",

@@ -5,33 +5,38 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: jscrud:latest
+    image: jscrud:2.1
     container_name: jscrud
     restart: unless-stopped
-    tty: true
     ports:
       - "80:80"
     environment:
+      PORT: 80
       SERVICE_NAME: jscrudapp
-      SERVICE_TAGS: dev
+      MYSQL_HOST: mysqldb
+      MYSQL_USER: 'appuser1'
+      MYSQL_PASSWORD: 'password1234'
+      MYSQL_DATABASE: 'people'
     working_dir: /app
+    depends_on:
+      -  db
     networks:
       - app-network
 
   db:
     image: mysql:5.7.22
-    container_name: db
+    container_name: mysqldb
     restart: unless-stopped
-    tty: true
     ports:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: people
       MYSQL_ROOT_PASSWORD: password5678
-      SERVICE_TAGS: dev
       SERVICE_NAME: mysql
       MYSQL_USER: 'appuser1'
       MYSQL_PASSWORD: 'password1234'
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
     networks:
       - app-network
     volumes:

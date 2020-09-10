@@ -6,11 +6,12 @@ var connection = config.db.get;
 const server = restify.createServer({
 	            name    : config.name,
 	            version : config.version,
-	            url : config.hostname
+	            url : config.hostname,
+		    port : config.port
 });
 
-server.listen(80, function () {
-          console.log('%s listening at %s', server.name, server.url);
+server.listen(config.port, function () {
+          console.log('%s listening at port %s', server.name, server.url);
 });
 
 
